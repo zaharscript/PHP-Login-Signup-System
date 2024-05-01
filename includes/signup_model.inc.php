@@ -30,15 +30,15 @@ function get_email(object $pdo, string $email)
     return $result;
 }
 
-function create_user(object $pdo,string $pwd,string $username, string $email)
+function create_user(object $pdo, string $pwd, string $username, string $email)
 
 {
     $query = "INSERT INTO  tech_blog(username, pwd, email) VALUE (:username, :password,  :email);";
     $stmt = $pdo->prepare($query);
 
-    $option= [
+    $option = [
         'cost' => 12
-    ]
+    ];
     // hashing
     $hashedPwd = password_hash($pwd, PASSWORD_BCRYPT, $option);
 

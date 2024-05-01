@@ -57,3 +57,19 @@ button {
 button:hover {
     background-color: #4cae4c;
 }
+
+
+.success {
+    text-align: center;
+    font-size: 3em;
+    color: #69a76b;
+    margin-bottom: 20px
+}
+
+
+.error {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: 3em;
+}

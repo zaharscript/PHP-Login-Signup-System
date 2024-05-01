@@ -12,7 +12,22 @@ require_once 'includes/config_session.inc.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>PHP SignUp and Login System</title>
+    <style>
+        .success {
+            text-align: center;
+            font-size: 3em;
+            color: #69a76b;
+            margin-bottom: 20px
+        }
 
+
+        .error {
+            text-align: center;
+            font-weight: bold;
+            color: red;
+            font-size: 3em;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,6 +53,7 @@ require_once 'includes/config_session.inc.php';
         </form>
 
         <?php
+
         check_signup_error();
         ?>
 
