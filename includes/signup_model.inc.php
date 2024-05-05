@@ -30,7 +30,7 @@ function get_email(object $pdo, string $email)
     return $result;
 }
 
-function create_user(object $pdo, string $pwd, string $username, string $email)
+function set_user(object $pdo, string $pwd, string $username, string $email)
 
 {
     $query = "INSERT INTO  tech_blog(username, pwd, email) VALUE (:username, :password,  :email);";

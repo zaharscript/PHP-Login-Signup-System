@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors["username_taken"] = "Username is already taken!";
         }
         if (is_email_registered($pdo, $email)) {
-            $errors["email_registered"] = "Email address is already registered!";
+            $errors["email_used"] = "Email address is already registered!";
         }
 
         require_once 'config_session.inc.php'; //better to use this method then "session_start();"
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         create_user($pdo, $pwd, $username, $email);
-        header("Location: ../index.php?=signup=success");
+        header("Location: ../index.php?signup=success");
 
         $pdo = null;
         $stmt = null;
