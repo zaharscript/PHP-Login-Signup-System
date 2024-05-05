@@ -46,9 +46,9 @@ require_once 'includes/config_session.inc.php';
 
 
         <form action="includes/signup.inc.php" method="post">
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" placeholder="Password">
-            <input type="email" name="email" placeholder="Email">
+            <?php
+            signup_inputs();
+            ?>
             <button type="submit">SignUp</button>
         </form>
 
