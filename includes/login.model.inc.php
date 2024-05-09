@@ -3,7 +3,7 @@
 declare(strict_type=1);
 function get_user(object $pdo, string $username)
 {
-    $query = "SELECT * FROM tech_blog WHERE username = :username";
+    $query = "SELECT * FROM tech_blog WHERE username = :username;";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":username", $username);
     $stmt->execute();
